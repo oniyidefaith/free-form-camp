@@ -4,52 +4,68 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="script" href="script.js">
-    <title>forms</title>
+    <link rel="stylesheet" href="style.css">
+    <title>Form</title>
 </head>
 <body>
-    <h1>forms for developer</h1>
-    <p>Input your name</p>
-    <form for="name"><input type="text" name="name" id="name" placeholder="Name"></form>
-    <p>Select your age</p>
-    <form for="age"><input type="radio" name="age" id="age">2-15</input></form>
-    <form for="age"><input type="radio" name="age" id="age">16-30</input></form>
-    <form for="age"><input type="radio" name="age" id="age">31-above</input></form>
-    <div id="list">
-    <p>what are your specialties</p>
-    <form for="field"><input type="checkbox" name="Front-End" id="one" required>Front-End Developper</input>
-        <div id="other" required>
-            <p>tools</p>
-            <form for="tools"><input type="radio" name="tools" id="tools">HTML</input></form>
-            <form for="tools"><input type="radio" name="tools" id="tools">CSS</input></form>
-            <form for="tools"><input type="radio" name="tools" id="tools">Javascript</input></form>
-            <form for="tools"><input type="radio" name="tools" id="tools">Boothstrap</input></form>
-            <form for="tools"><input type="radio" name="tools" id="tools">React</input></form>
-            <form for="tools"><input type="radio" name="tools" id="tools">Sass</input></form>
-            <form for="tools"><input type="radio" name="tools" id="tools">Others</input></form>
-            <form for="tools"><input type="text" name="tools" id="specify" placeholder="specify" required></form>
-        </div>
-    </form>
-    <form for="field"><input type="checkbox" name="Backend-Developper" id="two">Backend-Developper</input></form>
-    <form for="field"><input type="checkbox" name="fullstack-developper" id="three">fullstack-developper</input></form>
-    <form for="field"><input type="checkbox" name="cloud" id="four">cloud engineer</input></form>
-    <form for="field"><input type="checkbox" name="soft" id="five">software engineer</input></form>
-    <form for="field"><input type="checkbox" name="devop" id="six">software developper</input></form>
-    <form for="field"><input type="checkbox" name="mobile" id="seven">mobile app developper</input></form>
-    <form for="field"><input type="checkbox" name="analyst" id="eight">data analyst</input></form>
-    <form for="field"><input type="checkbox" name="data science" id="nine">data science</input></form>
-    <form for="field"><input type="checkbox" name="blockchain" id="ten">blockchain engineer</input></form>
-    <form for="field"><input type="checkbox" name="a.i" id="eleven">A.I engineer</input></form>
-    <form for="field"><input type="checkbox" name="machine" id="twelve">machine learning engineer</input></form>
-    <form for="field"><input type="checkbox" name="deep" id="13">Deep learning</input></form>
-    <form for="field"><input type="checkbox" name="cyber" id="14">Cyber security</input></form>
-    <form for="field"><input type="checkbox" name="web-designeer" id="15">Web-designeer</input></form>
-    <form for="field"><input type="checkbox" name="ios" id="16">ios app developer</input></form>
-    <form for="field"><input type="checkbox" name="Product" id="17">Product web-designeer</input></form>
-    <form for="field"><input type="checkbox" name="ux" id="18">UI/UX developer</input></form>
-    <form for="field"><input type="checkbox" name="manager" id="19">Product manager</input></form>
-    <form for="field"><input type="checkbox" name="game" id="20">Game developper</input></form>
+    <div class="header">
+    <h1>Free Code Camp Survey Form</h1>
+    <p>Thanks for filling the form</p>
+    </div>
+    <div class="center">
+    <form action="">
+        <p>Name</p>
+        <label for="input"><input type="text" name="name" value="submit" id="first" placeholder="Name" required checked></label><br>
+        <p>E-mail</p>
+        <label for="E-mail"><input type="email" name="email" id="email" placeholder="email" required></label><br>
+        <p>age(optional)</p>
+        <label for="age"><input type="number" name="age" id="age" placeholder="age"></label>
+        <p>please specify your role</p>
+        <select id="dropmenu" name="role" class="form-control" required="">
+            <option disabled="" selected="" value="">Select current role</option>
+            <option value="student">Student</option>
+            <option value="job">Full Time Job</option>
+            <option value="learner">Full Time Learner</option>
+            <option value="preferNo">Prefer not to say</option>
+            <option value="other">Other</option>
+          </select>
+<div class="group">
+          <p>will you recommend freecodecamp to your friend</p>
+              <label for="list"><input type="radio" name="definate" class="group"  checked>Definately</label><br>
+              <label for=""><input type="radio" name="maybe"  class="group">maybe</label><br>
+              <label for=""><input type="radio" name="sure" class="group">i'll think about it.</label>
 </div>
-<form for="button"><button>submit</button></form>
+<select id="dropmenu" name="role" class="form-control" required="">
+    <option disabled="" selected="" value="">Whats your favourite thing about freecode camp</option>
+    <option value="student">Challenge</option>
+    <option value="job">Method of teaching</option>
+    <option value="learner">Project</option>
+    <option value="preferNo">community</option>
+    <option value="other">Opensource</option>
+  </select><br>
+  <div class="form-group">
+    <p>
+      What would you like to see improved?
+      <span class="clue">(Check all that apply)</span>
+    </p><br>
+
+    <label><input name="prefer" value="front-end-projects" type="checkbox" class="input-checkbox">Front-end Projects</label>
+    <label><br>
+      <input name="prefer" value="back-end-projects" type="checkbox" class="input-checkbox">Back-end Projects</label><br>
+    <label><input name="prefer" value="data-visualization" type="checkbox" class="input-checkbox">Data Visualization</label><br>
+    <label><input name="prefer" value="challenges" type="checkbox" class="input-checkbox">Challenges</label><br>
+    <label><input name="prefer" value="open-source-community" type="checkbox" class="input-checkbox">Open Source Community</label><br>
+    <label><input name="prefer" value="gitter-help-rooms" type="checkbox" class="input-checkbox">Gitter help rooms</label><br>
+    <label><input name="prefer" value="videos" type="checkbox" class="input-checkbox">Videos</label><br>
+    <label><input name="prefer" value="city-meetups" type="checkbox" class="input-checkbox">City Meetups</label><br>
+    <label><input name="prefer" value="wiki" type="checkbox" class="input-checkbox">Wiki</label><br>
+    <label><input name="prefer" value="forum" type="checkbox" class="input-checkbox">Forum</label><br>
+    <label><input name="prefer" value="additional-courses" type="checkbox" class="input-checkbox">Additional Courses</label>
+  </div><br>
+  <p>Leave a message about freecodecamp</p>
+  <textarea rows="5" cols="60" name="text" placeholder="message"></textarea><br>
+ <button><input type="button" value="submit"></button>
+    </form>
+    </div>
 </body>
 </html>
